@@ -13,8 +13,11 @@ dl_env/
 # W&B logs
 wandb/
 
-# Hugging Face cache
-data/
+# Ignore all files in data folder
+data/*
+
+# But keep the vocabulary file
+!data/vocabs.pkl
 
 # Local checkpoints
 checkpoints/
