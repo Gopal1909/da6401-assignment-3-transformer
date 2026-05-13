@@ -14,7 +14,7 @@ dl_env/
 wandb/
 
 # Hugging Face cache
-data/bentrevett___multi30k/
+data/
 
 # Local checkpoints
 checkpoints/
