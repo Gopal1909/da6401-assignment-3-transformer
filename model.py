@@ -603,8 +603,8 @@ class Transformer(nn.Module):
         import spacy
 
         # Load tokenizers
-        self.spacy_de = spacy.load("de_core_news_sm")
-        self.spacy_en = spacy.load("en_core_web_sm")
+        self.spacy_de = spacy.blank("de")
+        self.spacy_en = spacy.blank("en")
 
         # Load vocabularies
         with open("./data/vocabs.pkl", "rb") as f:
