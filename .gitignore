@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+dl_env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# W&B logs
+wandb/
+
+# Hugging Face cache
+data/bentrevett___multi30k/
+
+# Local checkpoints
+checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
