@@ -22,3 +22,7 @@ checkpoints/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Test files
+test_1.py
+test_2.py

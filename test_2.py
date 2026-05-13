@@ -8,3 +8,4 @@ def run_training_experiment():
 if __name__ == "__main__":
     print("Main block running")
     run_training_experiment()
+    
