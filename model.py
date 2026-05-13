@@ -784,7 +784,7 @@ class Transformer(nn.Module):
                 self,
                 src,
                 src_mask,
-                max_len=100,
+                max_len=25,
                 start_symbol=self.tgt_sos_idx,
                 end_symbol=self.tgt_eos_idx,
                 device=device,
