@@ -544,17 +544,26 @@ class Transformer(nn.Module):
 
     def __init__(
         self,
-        src_vocab_size: int,
-        tgt_vocab_size: int,
-        d_model:   int   = 512,
-        N:         int   = 6,
-        num_heads: int   = 8,
-        d_ff:      int   = 2048,
-        dropout:   float = 0.1,
+        src_vocab_size: int = None,
+        tgt_vocab_size: int = None,
+        d_model: int = 512,
+        N: int = 6,
+        num_heads: int = 8,
+        d_ff: int = 2048,
+        dropout: float = 0.1,
         checkpoint_path: str = None,
     ) -> None:
         super().__init__()
         # TODO: Instantiate
+        import pickle
+
+        # If vocabulary sizes are not provided, load them from vocabs.pkl
+        if src_vocab_size is None or tgt_vocab_size is None:
+            with open("./data/vocabs.pkl", "rb") as f:
+                src_vocab, tgt_vocab = pickle.load(f)
+
+            src_vocab_size = len(src_vocab)
+            tgt_vocab_size = len(tgt_vocab)
         # Save configuration for checkpointing
         self.config = {
             "src_vocab_size": src_vocab_size,
