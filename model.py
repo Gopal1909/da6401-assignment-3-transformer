@@ -180,6 +180,9 @@ class MultiHeadAttention(nn.Module):
 
         # Dropout applied to attention weights
         self.dropout = nn.Dropout(dropout)
+        
+        self.attention_weights = None
+        self.store_attention = False
     
     def forward(
         self,
@@ -225,6 +228,10 @@ class MultiHeadAttention(nn.Module):
         # 3. Apply scaled dot-product attention
         # --------------------------------------------------
         attn_output, attn_weights = scaled_dot_product_attention(Q, K, V, mask)
+        
+        # Store attention weights for visualization
+        if self.store_attention:
+            self.attention_weights = attn_weights.detach().cpu()
 
         # Optional dropout on attention output
         attn_output = self.dropout(attn_output)

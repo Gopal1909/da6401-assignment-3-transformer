@@ -47,7 +47,7 @@ The implementation includes:
 
 Project Link: https://wandb.ai/ce23b124-indian-institute-of-technology-madras/da6401-assignment3
 
-Report Link: *(to be added later)*
+Report Link: https://wandb.ai/ce23b124-indian-institute-of-technology-madras/da6401-assignment3/reports/Assignment-3-Report--VmlldzoxNjkwNDIwNw?accessToken=zzncg03qqg0ovlcmsw7edznlkrzu0sx13fdyp2rp5vbtapbd1d2xetkn2cn311pd
 
 ## Pretrained Model
 
